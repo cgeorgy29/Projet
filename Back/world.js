@@ -1,6 +1,6 @@
 module.exports = { 
-    "name": "Nom du monde", 
-    "logo": "icones/logomonde.jpg", 
+    "name": "Isaac Capitalist", 
+    "logo": "icones/world_icon.png", 
     "money": 0, 
     "score": 0, 
     "totalangels": 0, 
@@ -10,8 +10,8 @@ module.exports = {
     "products": [ 
         { 
             "id": 1, 
-            "name": "premier produit", 
-            "logo": "icones/premierproduit.jpg", 
+            "name": "Larry", 
+            "logo": "icones/larry.png", 
             "cout": 4, 
             "croissance": 1.07, 
             "revenu": 1, 
@@ -43,14 +43,41 @@ module.exports = {
         },
         { 
             "id": 2, 
-            "name": "Deuxième produit ", 
-            "logo": "icones/deuxiemeproduit.jpg", 
+            "name": "Monstro", 
+            "logo": "icones/monstro.png", 
+            "cout": 10,
+            "croissance": 1.15,
+            "revenu": 40,
+            "vitesse": 250,
+            "quantite": 0,
+            "timeleft": 0,
+            "managerUnlocked": false,
+            "palliers": [
+                {
+                    "name": "Nom du premier palier",
+                    "logo": "icones/premierpalier.jpg",
+                    "seuil": 20,
+                    "idcible": 2,
+                    "ratio": 2,
+                    "typeratio": "vitesse",
+                    "unlocked": "false"
+                },
+                {
+                    "name": "Nom deuxième palier",
+                    "logo": "icones/deuxiemepalier.jpg",
+                    "seuil": 75,
+                    "idcible": 2,
+                    "ratio": 2,
+                    "typeratio": "vitesse",
+                    "unlocked": "false"
+                },
+            ]
        }     
     ], 
     "allunlocks": [ 
         { 
-            "name": "Nom du premier unlock général", 
-            "logo": "icones/premierunlock.jpg", 
+            "name": "Basement Boy", 
+            "logo": "icones/basementboy.png", 
             "seuil": 30, 
             "idcible": 0, 
             "ratio": 2, 
@@ -60,8 +87,8 @@ module.exports = {
    ],  
     "upgrades": [ 
         { 
-            "name": "Nom du premier upgrade", 
-            "logo": "icones/premierupgrade.jpg", 
+            "name": "Magic Mushrooms", 
+            "logo": "icones/magicmushrooms.png", 
             "seuil": 1e3, 
             "idcible": 1, 
             "ratio": 3, 
@@ -84,8 +111,8 @@ module.exports = {
   
     "managers": [ 
         { 
-            "name": "Wangari Maathai", 
-            "logo": "icones/WangariMaathai.jpg", 
+            "name": "Isaac", 
+            "logo": "icones/Isaac.png", 
             "seuil": 10, 
             "idcible": 1, 
             "ratio": 0, 
