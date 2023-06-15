@@ -1,0 +1,88 @@
+.mainProd{
+    background-image: url(../../assets/images/product_background.png);
+    background-size:contain ;
+    background-repeat: no-repeat;
+    /* width: 80%; */
+    /* height: 100%; */
+    display: grid;
+    grid-template-columns: 1.6fr 3fr;
+    grid-template-rows: 0.5fr 3fr 0.5fr;
+    padding: 5% 3%;
+}
+ 
+
+.nomBoss{
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+    font-size: 1.3vw;
+    font-weight: bold;
+}
+
+.boss{
+    grid-column: 1;
+    grid-row: 2;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    
+}
+.quantite{
+    grid-column: 1;
+    grid-row: 2;
+    text-align: center;
+    font-size: 0.9vw;
+}
+
+.cout{
+    grid-column: 2;
+    grid-row: 3;
+    text-align: center;
+    font-size: 1.1vw;
+    font-family: 'upheaval';
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    /*ombre*/
+    text-shadow: 0 0 5px #999,
+    0 0 10px #333
+
+}
+
+.cout:hover{
+    /*ombre*/
+    text-shadow: 0 0 5px #999,
+    0 0 10px red;
+}
+
+.cout:disabled{
+    font-size: 1.1vw;
+    /*ombre*/
+    text-shadow: 0 0 5px #999,
+    0 0 10px #333;
+    cursor: not-allowed;
+}
+
+/* barre de progression */
+.barre {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+
+.revenu{
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+    font-size: 1vw;
+}
+
+
+/* 
+.mainProd>div{
+    border: 2px;
+    border-style: solid;
+    border-color: #000000;
+} */

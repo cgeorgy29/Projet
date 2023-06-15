@@ -1,15 +1,131 @@
 .header { 
     display: grid; 
-    grid-template-columns: 25% 25% 30% 20%; 
+    /* border: 1px solid black; */
+    grid-template-columns: 15% 30% 30% 20%; 
+    font-size: 2.5vw;
+    align-items: center;
+    justify-content: center;
   } 
  
 .main { 
     display: grid; 
-    grid-template-columns: 20% 80%; 
+    grid-template-columns: 27% 73%; 
   } 
- 
+
+.leftmenu { 
+    display: grid; 
+    background: url(..\assets\images\left_menu.svg);
+    background-size:contain ;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%; 
+    margin-left: 1%;
+
+    /* mettre les élément les un au dessus des autres */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 0px;
+    justify-items: start;
+  }
+
+  .leftmenu button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: 'upheaval';
+    font-size: 1.6vw;
+    text-shadow: 0 0 5px #999,
+    0 0 10px #333;
+    margin-top: calc(40% - 10vw);
+    margin-left: 10%;
+  }
+
+  .leftmenu button:hover {
+    text-shadow: 0 0 5px #fff,
+    0 0 10px red;
+  }
+
+  .leftmenu button img{
+    width: 3.5vw;
+  }
+
+  #unlock{
+    margin-top: calc(5vw);
+  }
+
 .product { 
     display: grid; 
     grid-template-columns: 1fr 1fr; 
+    /* background-color:darkgreen; */
   } 
- 
+
+  .detProd { 
+    width: 100%;
+  }
+
+  #divmulti{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-image: url(../assets/images/back_multi.png);
+    background-size:contain ;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 0;
+    padding-bottom: 55%;
+  }
+
+  #btnmulti { 
+    font-family: 'upheaval';
+    font-size: 3vw;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding-top: 9vw;
+    padding-right: 4vw;
+
+    /*ombre*/
+    text-shadow: 0 0 5px #999,
+    0 0 10px #333;
+
+    /*orientation*/
+    transform: rotate(-25deg);  
+  }
+
+  #Coin{
+    background-image: url(../assets/images/Back_coin.png);
+    background-size:contain ;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 70%;
+    height: 0;
+    padding-bottom: 50%; 
+    display: flex;
+    justify-content: center;
+  }
+
+  #joueur {
+    background-image: url(../assets/images/Whoami.png);
+    background-size:contain ;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 70%;
+    height: 0;
+    padding-bottom: 50%; 
+  }
+
+  #InputID{
+    font-family: 'upheaval';
+    font-size: 2.5vw;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 7vw;
+    margin-left: 4vw;
+    width:calc(100% - 7vw);
+
+    }
+
+    

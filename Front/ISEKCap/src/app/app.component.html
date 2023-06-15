@@ -1,20 +1,37 @@
 <div class="header"> 
-  <div> logo monde </div> 
-  <div> argent </div> 
-  <div> multiplicateur </div> 
-  <div> ID du joueur </div> 
+  <audio autoplay loop src="../assets/music/regenesis-_loop_-v3.mp3">
+  </audio>
+    <div>
+      <img [attr.src]="server+world.logo" alt="" style="width: 10vw;"/>
+    </div> 
+    <div id="Coin">
+      <!-- <img src="../assets/images/coin1.png" alt="Coin" style="width: 2.3vw;"/> -->
+      <p style="margin-top: 6vw;">{{world.money | bigvalue}}</p>
+       
+      </div> 
+    <div id="joueur">
+      <input type="text" id="InputID" name="name" placeholder="ID joueur">
+    </div> 
+    <div id="divmulti" ><button id="btnmulti" (click)="BTNmulti()" >x1</button> </div> 
 </div> 
 
-<div class="main"> 
-  <div> liste des boutons de menu </div> 
-  <div class="product"> 
-          <div> premier produit </div> 
-          <div> second produit </div> 
-          <div> troisième produit </div> 
-          <div> quatrième produit </div> 
-          <div> cinquième produit </div> 
-          <div> sixième produit </div> 
-</div> 
-</div>
+  <div class="main"> 
+    <span class="leftmenu">
+      <button id="unlock" (click)="openModal('unlock')"><img src="../assets/images/close_TRoom.png"> Unlock</button>
+      <button id="cUpg" (click)="openModal('upgrade')"><img src="../assets/images/close_shop.png">Coin Upgrade</button>
+      <button id="aUpg" (click)="openModal('angel')"><img src="../assets/images/close_angel.png">Angels Upgrade</button>
+      <button id="manager" (click)="openModal('manager')"><img src="../assets/images/close_mana.png">Manager</button>
+    </span> 
+    <div class="product"     *ngIf="world.products.length > 0"> 
+      <app-product *ngFor="let p of world.products" 
+      [Wmoney]="world.money" 
+      [qtmulti]="qtmulti" 
+      (notifyProduction)="onProductionDone($event)" 
+      (notifyAchat)="onBuy($event)"
+      [prod]="p"
+      class="detProd"></app-product>
+   
+  </div> 
+  </div>
 
 <router-outlet></router-outlet>

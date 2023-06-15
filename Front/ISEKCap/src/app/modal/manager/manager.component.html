@@ -1,0 +1,22 @@
+<div class="modal">
+      <h1 class="title">Acheter des managers</h1>
+      <div *ngFor="let manager of world.managers">
+        <div *ngIf="!manager.unlocked" class="main">
+          <span>
+            <img
+              [src]="server + '/' + manager.logo"
+            />
+          </span>
+          <span>
+            {{ manager.name }} VS {{ world.products[manager.idcible - 1].name }}
+            <button
+              class=""
+              (click)="hireManager(manager)"
+              [disabled]="world.money < manager.seuil ||world.money == 0"
+            >
+              <span> {{ manager.seuil }} </span>
+            </button>
+          </span>
+        </div>
+      </div>
+  </div>

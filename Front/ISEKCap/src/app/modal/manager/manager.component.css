@@ -1,0 +1,12 @@
+.modal {
+  overflow: auto;
+}
+
+.modal img {
+  width: 7vw;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 27% 73%;
+}

@@ -1,4 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+    margin: 0; 
+    font-family: 'upheaval';
+    background-image: url(./assets/images/background.svg);
+    background-size: cover;
+}
+
+@font-face {
+    font-family: 'upheaval';
+    src: url(./font/upheavtt.ttf);
+}

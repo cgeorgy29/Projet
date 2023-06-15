@@ -1,1 +1,46 @@
-<p>product works!</p>
+<div class="mainProd"> 
+    <div class="boss" (click)="startFabrication()">
+        <img [attr.src]="server+product.logo" style="width: 5.5vw; position: absolute;"/>
+    </div>
+    <button class="cout"
+        mat-flat-button
+        color="primary"
+        (click)="buyProduct()"
+        [disabled]="this._Wmoney == 0 || this._Wmoney < this.coutReel"
+        >MORE!!! : {{coutReel | bigvalue}}
+        <img src="../assets/images/coin1.png" alt="Coin"/>
+    </button>
+    <!-- <div class="cout">
+        MORE!!! : {{coutReel | bigvalue}} {{_qtmulti}}
+        <img src="../assets/images/coin1.png" alt="Coin"/>
+     </div> -->
+    <div class="nomBoss">
+       {{product.name}} X {{product.quantite | bigvalue}}
+    </div>
+    <div class="barre">
+        <div  style="position: absolute;">
+            <img src="../../assets/images/FrontBarre.png" alt="front" style="width:20vw; height: 5.5vw;"/>
+        </div>
+        <div>
+            <app-my-progress-bar
+            [run]="run" 
+            [auto]="auto"
+            frontcolor="#4a4240"
+            backcolor="#ccbcbc"
+            [vitesse]= "product.vitesse"
+            [initialValue]="0"
+            [orientation]="horizontal"
+            >
+        </app-my-progress-bar>  
+        </div>
+         
+
+    </div>
+         
+    <div class="revenu">
+        Gain : {{product.quantite*product.revenu}}
+        <img src="../assets/images/coin1.png" alt="Coin"/>
+
+    </div>
+
+
