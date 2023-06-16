@@ -12,6 +12,7 @@ import { UnlockComponent } from './modal/unlock/unlock.component';
 import { UpgradeComponent } from './modal/upgrade/upgrade.component';
 import { AngelComponent } from './modal/angel/angel.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSnackBarModule
     ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,12 +9,13 @@
           </span>
           <span>
             {{ manager.name }} VS {{ world.products[manager.idcible - 1].name }}
-            <button
-              class=""
+            <button 
+              class="coin"
               (click)="hireManager(manager)"
               [disabled]="world.money < manager.seuil ||world.money == 0"
             >
               <span> {{ manager.seuil }} </span>
+              <img src="../../../assets/images/coin1.png" alt="Coin" style="width: 1vw;"/>
             </button>
           </span>
         </div>

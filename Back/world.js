@@ -27,7 +27,7 @@ module.exports = {
                     "idcible": 1, 
                     "ratio": 2, 
                     "typeratio": "vitesse", 
-                    "unlocked": "false" 
+                    "unlocked": false 
                 }, 
                 { 
                     "name": "Nom deuxième palier", 
@@ -36,7 +36,7 @@ module.exports = {
                     "idcible": 1, 
                     "ratio": 2, 
                     "typeratio": "vitesse", 
-                    "unlocked": "false" 
+                    "unlocked": false 
                 }, 
             ]
                 
@@ -60,7 +60,7 @@ module.exports = {
                     "idcible": 2,
                     "ratio": 2,
                     "typeratio": "vitesse",
-                    "unlocked": "false"
+                    "unlocked": false
                 },
                 {
                     "name": "Nom deuxième palier",
@@ -69,7 +69,7 @@ module.exports = {
                     "idcible": 2,
                     "ratio": 2,
                     "typeratio": "vitesse",
-                    "unlocked": "false"
+                    "unlocked": false
                 },
             ]
        },
@@ -92,7 +92,7 @@ module.exports = {
                     "idcible": 3,
                     "ratio": 2,
                     "typeratio": "vitesse",
-                    "unlocked": "false"
+                    "unlocked": false
                 },
                 {
                     "name": "Nom deuxième palier",
@@ -101,7 +101,7 @@ module.exports = {
                     "idcible": 3,
                     "ratio": 2,
                     "typeratio": "vitesse",
-                    "unlocked": "false"
+                    "unlocked": false
                 },
             ]
        },
@@ -124,7 +124,7 @@ module.exports = {
                     "idcible": 4,
                     "ratio": 2,
                     "typeratio": "vitesse",
-                    "unlocked": "false"
+                    "unlocked": false
                 },
                 {
                     "name": "Nom deuxième palier",
@@ -133,7 +133,7 @@ module.exports = {
                     "idcible": 4,
                     "ratio": 2,
                     "typeratio": "vitesse",
-                    "unlocked": "false"
+                    "unlocked": false
                 },
             ]
        },
@@ -156,7 +156,7 @@ module.exports = {
                     "idcible": 5,
                     "ratio": 2,
                     "typeratio": "vitesse",
-                    "unlocked": "false"
+                    "unlocked": false
                 },
                 {
                     "name": "Nom deuxième palier",
@@ -165,7 +165,7 @@ module.exports = {
                     "idcible": 5,
                     "ratio": 2,
                     "typeratio": "vitesse",
-                    "unlocked": "false"
+                    "unlocked": false
                 },
             ]
        },
@@ -188,7 +188,7 @@ module.exports = {
                     "idcible": 6,
                     "ratio": 2,
                     "typeratio": "vitesse",
-                    "unlocked": "false"
+                    "unlocked": false
                 },
                 {
                     "name": "Nom deuxième palier",
@@ -197,7 +197,7 @@ module.exports = {
                     "idcible": 6,
                     "ratio": 2,
                     "typeratio": "vitesse",
-                    "unlocked": "false"
+                    "unlocked": false
                 },
             ]
        }     
@@ -210,7 +210,7 @@ module.exports = {
             "idcible": 0, 
             "ratio": 2, 
             "typeratio": "gain", 
-            "unlocked": "false" 
+            "unlocked": false 
         }, 
    ],  
     "upgrades": [ 
@@ -221,7 +221,7 @@ module.exports = {
             "idcible": 1, 
             "ratio": 3, 
             "typeratio": "gain", 
-            "unlocked": "false" 
+            "unlocked": false 
         }, 
     ], 
     "angelupgrades": [ 
@@ -232,7 +232,7 @@ module.exports = {
             "idcible": 0, 
             "ratio": 3, 
             "typeratio": "gain", 
-            "unlocked": "false" 
+            "unlocked": false 
         }, 
     ], 
 
@@ -245,7 +245,7 @@ module.exports = {
             "idcible": 1, 
             "ratio": 0, 
             "typeratio": "gain", 
-            "unlocked": "false" 
+            "unlocked": false 
         },
         {
             "name": "Lilith",
@@ -254,7 +254,7 @@ module.exports = {
             "idcible": 2,
             "ratio": 0,
             "typeratio": "gain",
-            "unlocked": "false"
+            "unlocked": false
         },
         {
             "name": "Lazarus",
@@ -263,7 +263,7 @@ module.exports = {
             "idcible": 3,
             "ratio": 0,
             "typeratio": "gain",
-            "unlocked": "false"
+            "unlocked": false
         },
         {
             "name": "Dark Esau",
@@ -272,7 +272,7 @@ module.exports = {
             "idcible": 4,
             "ratio": 0,
             "typeratio": "gain",
-            "unlocked": "false"
+            "unlocked": false
         },
         {
             "name": "The Lost",
@@ -281,7 +281,7 @@ module.exports = {
             "idcible": 5,
             "ratio": 0,
             "typeratio": "gain",
-            "unlocked": "false"
+            "unlocked": false
         },
         {
             "name": "Apollyon",
@@ -290,7 +290,7 @@ module.exports = {
             "idcible": 6,
             "ratio": 0,
             "typeratio": "gain",
-            "unlocked": "false"
+            "unlocked": false
         }
     ] 
 };

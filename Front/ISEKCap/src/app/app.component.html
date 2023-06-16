@@ -10,14 +10,14 @@
        
       </div> 
     <div id="joueur">
-      <input type="text" id="InputID" name="name" placeholder="ID joueur">
+      <input type="text" ng-model="username" (change)="onUsernameChanged()" id="InputID" name="username" placeholder="ID joueur">
     </div> 
     <div id="divmulti" ><button id="btnmulti" (click)="BTNmulti()" >x1</button> </div> 
 </div> 
 
   <div class="main"> 
     <span class="leftmenu">
-      <button id="unlock" (click)="openModal('unlock')"><img src="../assets/images/close_TRoom.png"> Unlock</button>
+      <button id="unlock"  (click)="openModal('unlock')"><img src="../assets/images/close_TRoom.png"> Unlock</button>
       <button id="cUpg" (click)="openModal('upgrade')"><img src="../assets/images/close_shop.png">Coin Upgrade</button>
       <button id="aUpg" (click)="openModal('angel')"><img src="../assets/images/close_angel.png">Angels Upgrade</button>
       <button id="manager" (click)="openModal('manager')"><img src="../assets/images/close_mana.png">Manager</button>

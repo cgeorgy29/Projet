@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { World, Palier, Product } from './world';
 import { WebserviceService } from './webservice.service';
 import { ComponentType } from '@angular/cdk/portal';
@@ -19,14 +19,21 @@ export class AppComponent {
   title = 'ISEKCap';
   world: World = new World(); 
   qtmulti = '1x';
+  username =''
 
-constructor(private service: WebserviceService, public dialog: MatDialog) { 
+constructor(private service: WebserviceService, private dialog: MatDialog) { 
    service.getWorld().then( 
     world => { 
       this.world = world.data.getWorld; 
     }); 
-    this.server = service.server;
+    this.server = service.server; 
 }
+
+
+ngAfterViewInit(){
+    this.verifyUsername();
+  }
+
 //bouton multiplicateur de quantité
 BTNmulti() {
   let bt = document.getElementById("btnmulti")!.innerHTML;
@@ -87,6 +94,36 @@ onProductionDone(product: Product) {
     this.world.money -= nbachat;
   }
 
+  onUsernameChanged(){
+    let input = document.getElementById("InputID") as HTMLInputElement;
+    if (this.username  == "" || this.username == null){
+      localStorage.setItem("username", input.value);
+      this.username = input.value;
+      this.service.setuser(this.username);
+    }
+    if (input.value != this.username){
+      localStorage.setItem("username", input.value);
+      this.username = input.value;
+      this.service.setuser(this.username);
+    }
+
+
+  }
+
+  verifyUsername(){
+    console.log("verifyUsername");
+    let input = document.getElementById("InputID") as HTMLInputElement;
+    if (localStorage.getItem("username") == null || localStorage.getItem("username") == ""){
+        localStorage.setItem("username", "Ano"+ Math.floor(Math.random() * 1000));  
+        this.username = localStorage.getItem("username")!;
+        input.value = this.username;
+    }
+    else{
+      this.username = localStorage.getItem("username")!;
+      input.value = this.username;
+    }
+    this.service.setuser(this.username);
+  }
 
 
 }

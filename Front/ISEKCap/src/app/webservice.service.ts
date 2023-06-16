@@ -21,4 +21,9 @@ export class WebserviceService {
 }
 
   constructor() { }
+
+  setuser(user: string) {
+    this.user = user;
+    console.log(this.user);
+  }
 }

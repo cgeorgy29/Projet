@@ -1,5 +1,6 @@
 .modal {
   overflow: auto;
+  padding: 1vw;
 }
 
 .modal img {
@@ -9,4 +10,31 @@
 main {
   display: grid;
   grid-template-columns: 27% 73%;
+}
+
+.coin{
+  text-align: center;
+  font-size: 1.1vw;
+  font-family: 'upheaval';
+  background-color: transparent;
+  cursor: pointer;
+
+  /*ombre*/
+  text-shadow: 0 0 5px #999,
+  0 0 10px #333
+
+}
+
+.coin:hover{
+  /*ombre*/
+  text-shadow: 0 0 5px #999,
+  0 0 10px red;
+}
+
+.coin:disabled{
+  font-size: 1.1vw;
+  /*ombre*/
+  text-shadow: 0 0 5px #999,
+  0 0 10px #333;
+  cursor: not-allowed;
 }

@@ -28,7 +28,7 @@ export class ProductComponent implements OnInit {
       //console.log("tick");
       this.calcScore();
       this.calcMaxCanBuy();
-    },100);
+    },50);
     }
   @Input()
    set prod(value: Product) {
@@ -57,7 +57,7 @@ export class ProductComponent implements OnInit {
     var now = Date.now();
     var delta = now - this.lastupdate;
     this.lastupdate = now;
-  
+    
     if(this.product.timeleft > 0) {
       this.product.timeleft -= delta;
       if(this.product.timeleft <= 0) {
@@ -67,7 +67,13 @@ export class ProductComponent implements OnInit {
         this.notifyProduction.emit(this.product);
         if (this.auto) this.startFabrication();
         }
-    }    
+    }  
+    if (this.product.quantite > 0 && this.product.managerUnlocked && !this.run) {
+      this.auto = true;
+      this.run = true;
+      this.product.timeleft = this.product.vitesse;
+      
+    }  
     
   }
 
@@ -111,19 +117,15 @@ export class ProductComponent implements OnInit {
   }
 
   startFabrication() { 
-    if (this.product.quantite>0 && this.product.managerUnlocked){
-     // console.log("startFabricationManager");
-      this.run = true;
-      this.auto = true;
-      this.product.timeleft = this.product.vitesse;
-    }
-    else if (this.product.quantite>0){
+    if (this.product.quantite>0){
       //console.log("startFabrication");
       this.product.timeleft = this.product.vitesse;
       this.run = true;
-      setTimeout(() => {
-        this.run = false;
-      },this.product.vitesse);
+      if (!this.auto){
+        setTimeout(() => {
+          this.run = false;
+        },this.product.vitesse);
+      }
     }
 
   }
