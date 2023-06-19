@@ -27,12 +27,12 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - dockerfile: ./Back/dockerfile
+          - dockerfile: ../Back/dockerfile
             image: ghcr.io/cgerogy29/${{ github.repository }}
-            context: ./Back # a remplacer par le dossier contenant votre back
-          - dockerfile: ./Front/dockerfile
+            context: ../Back # a remplacer par le dossier contenant votre back
+          - dockerfile: ../Front/dockerfile
             image: ghcr.io/cgerogy29/${{ github.repository }}
-            context: ./Front # à remplacer par le dossier contenant votre front
+            context: ../Front # à remplacer par le dossier contenant votre front
     permissions:
       contents: read
       packages: write
