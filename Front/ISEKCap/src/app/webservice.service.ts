@@ -24,6 +24,6 @@ export class WebserviceService {
 
   setuser(user: string) {
     this.user = user;
-    console.log(this.user);
+    //console.log(this.user);
   }
 }

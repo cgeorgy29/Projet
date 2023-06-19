@@ -21,7 +21,8 @@ export class AppComponent {
   qtmulti = '1x';
   username =''
 
-constructor(private service: WebserviceService, private dialog: MatDialog) { 
+constructor(private service: WebserviceService, private dialog: MatDialog) {
+  this.service.setuser(localStorage.getItem("username")!); 
    service.getWorld().then( 
     world => { 
       this.world = world.data.getWorld; 
@@ -100,11 +101,15 @@ onProductionDone(product: Product) {
       localStorage.setItem("username", input.value);
       this.username = input.value;
       this.service.setuser(this.username);
+      window.location.reload();
     }
     if (input.value != this.username){
       localStorage.setItem("username", input.value);
       this.username = input.value;
       this.service.setuser(this.username);
+      window.location.reload();
+      // console.log( this.username)
+      // console.log(this.service.user)
     }
 
 

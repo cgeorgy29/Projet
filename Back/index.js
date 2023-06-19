@@ -1,3 +1,4 @@
+const fs = require("fs/promises")
 let world = require('./world');
 const express = require('express'); 
 const { ApolloServer, gql } = require('apollo-server-express'); 
@@ -28,6 +29,7 @@ server.start().then( res => {
 async function readUserWorld(user) { 
   try { 
       const data = await fs.readFile(`userworlds/${user}-world.json`); 
+      console.log("Reading world for user: ", user, " data: ", data);
       return JSON.parse(data); 
   } 
   catch(error) { 
