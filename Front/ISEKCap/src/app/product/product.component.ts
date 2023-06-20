@@ -48,7 +48,7 @@ export class ProductComponent implements OnInit {
   @Output() notifyProduction: EventEmitter<Product> = new EventEmitter<Product>();
   @Output() notifyAchat = new EventEmitter<number>();
 
-  constructor(service: WebserviceService) {
+  constructor(public service: WebserviceService) {
     this.server = service.server;
   }
 
@@ -108,20 +108,30 @@ export class ProductComponent implements OnInit {
   
   buyProduct() {
     if (this._Wmoney >= this.coutReel) {
+      
       this._Wmoney -= this.coutReel;
       this.product.quantite += this.qteAchat;
       this.notifyAchat.emit(this.coutReel);
       this.product.cout = this.product.cout * Math.pow(this.product.croissance,this.qteAchat);
       this.calcMaxCanBuy();
+      this.service.acheterQtProduit(this.product, this.qteAchat).catch((error) => {
+        console.log("erreur" + error);
+      });
     }
   }
 
   startFabrication() { 
     if (this.product.quantite>0){
+      this.service.lancerProduction(this.product).catch((error) => {
+        console.log("erreur" + error);
+      });
       //console.log("startFabrication");
       this.product.timeleft = this.product.vitesse;
       this.run = true;
       if (!this.auto){
+        this.service.lancerProduction(this.product).catch((error) => {
+          console.log("erreur" + error);
+        });
         setTimeout(() => {
           this.run = false;
         },this.product.vitesse);

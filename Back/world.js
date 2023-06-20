@@ -81,7 +81,7 @@ module.exports = {
             "croissance": 1.14,
             "revenu": 100,
             "vitesse": 12000,
-            "quantite": 1,
+            "quantite": 0,
             "timeleft": 0,
             "managerUnlocked": false,
             "palliers": [
@@ -113,7 +113,7 @@ module.exports = {
             "croissance": 1.13,
             "revenu": 400,
             "vitesse": 24000,
-            "quantite": 1,
+            "quantite": 0,
             "timeleft": 0,
             "managerUnlocked": false,
             "palliers": [
@@ -145,7 +145,7 @@ module.exports = {
             "croissance": 1.12,
             "revenu": 6666,
             "vitesse": 48000,
-            "quantite": 1,
+            "quantite": 0,
             "timeleft": 0,
             "managerUnlocked": false,
             "palliers": [
@@ -177,7 +177,7 @@ module.exports = {
             "croissance": 1.11,
             "revenu": 66666,
             "vitesse": 96000,
-            "quantite": 1,
+            "quantite": 0,
             "timeleft": 0,
             "managerUnlocked": false,
             "palliers": [
